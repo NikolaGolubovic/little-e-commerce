@@ -43,13 +43,16 @@ const Product = () => {
       <div className="product-image">
         <img src={item.image} alt={item.title} />
       </div>
+      <div className="product-price">
+        <small>{item.price}$</small>
+      </div>
       <div className="product-title">
         <h2>{item.title}</h2>
       </div>
       <div className="item-description">
         <p>{item.description}</p>
       </div>
-      <div className="product-price">
+      <div className="product-cart">
         {cartInLocal?.find((elem) => elem.id === item.id) ? (
           <FaCartPlus
             className="cart-icon"

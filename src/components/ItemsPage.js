@@ -102,7 +102,7 @@ const ItemsPage = ({ itemsPage, category, items, setItemsPage, page }) => {
                 <FaCartPlus
                   className="cart-icon"
                   style={{
-                    color: "red",
+                    color: "rgb(247, 28, 48)",
                   }}
                 />
               ) : (

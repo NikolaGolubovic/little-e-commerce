@@ -13,7 +13,12 @@ const DropDownByPrice = ({ setPage }) => {
   }, []);
   return (
     <div className="dropdown">
-      <button className="dropbtn" onClick={() => setOpenDrop(!openDrop)}>
+      <button
+        className="dropbtn"
+        onClick={() => {
+          setOpenDrop(!openDrop);
+        }}
+      >
         Order by Price
       </button>
       <div className={openDrop ? " dropdown-content show" : "dropdown-content"}>

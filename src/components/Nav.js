@@ -13,35 +13,39 @@ const Nav = () => {
     dispatch({ type: ACTIONS.ITEMS_NUMBER });
   }, []);
   return (
-    <nav>
-      <NavLink
-        end
-        to="/"
-        className={({ isActive }) =>
-          "nav-link" + (isActive ? " activated" : "")
-        }
-      >
-        Home
-      </NavLink>
-      <NavLink
-        end
-        to="/products"
-        className={({ isActive }) =>
-          "nav-link" + (isActive ? " activated" : "")
-        }
-      >
-        Prodcuts
-      </NavLink>
-      <NavLink
-        to="/cart"
-        className={({ isActive }) =>
-          "nav-link" + (isActive ? " activated" : "")
-        }
-      >
-        <FaShoppingCart className="nav-cart" />{" "}
-        <span>{storeContext.cartQuantity}</span>
-      </NavLink>
-    </nav>
+    <header>
+      <nav>
+        <NavLink
+          end
+          to="/"
+          className={({ isActive }) =>
+            "nav-link" + (isActive ? " activated" : "")
+          }
+        >
+          Home
+        </NavLink>
+        <NavLink
+          end
+          to="/products"
+          className={({ isActive }) =>
+            "nav-link" + (isActive ? " activated" : "")
+          }
+        >
+          Prodcuts
+        </NavLink>
+        <NavLink
+          to="/cart"
+          className={({ isActive }) =>
+            "nav-link" + (isActive ? " activated" : "")
+          }
+        >
+          <div className="cart-nav">
+            <FaShoppingCart className="nav-cart" />{" "}
+            <span>{storeContext.cartQuantity}</span>
+          </div>
+        </NavLink>
+      </nav>
+    </header>
   );
 };
 

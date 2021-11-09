@@ -45,6 +45,7 @@ const Products = () => {
         items={items}
         page={page}
         setItemsPage={setItemsPage}
+        category={category}
       />
       <ReactPaginate
         previousLabel={"previous"}

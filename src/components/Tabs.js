@@ -38,6 +38,7 @@ const Tabs = ({
       getAllItems();
       setCategory("");
       setActive(index);
+      setPage(0);
       return;
     }
     getCategory(e.target.textContent);

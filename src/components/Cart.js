@@ -76,23 +76,25 @@ const Cart = () => {
               <p>{item.price}$</p>
             </div>
             <div className="item-quantity">
-              <p>
-                <span>
-                  <FaPlus onClick={() => upQuantity(item.id)} /> {item.quantity}{" "}
-                  <FaMinus onClick={() => downQuantity(item.id)} />
-                </span>
-              </p>
+              <FaPlus className="cart-fa" onClick={() => upQuantity(item.id)} />{" "}
+              <p class="item-quantity-text">{item.quantity}</p>
+              <FaMinus
+                className="cart-fa"
+                onClick={() => downQuantity(item.id)}
+              />
             </div>
             <div className="remove-item">
               <CgClose
-                className="close-icon"
+                className="remove-icon"
                 onClick={() => removeItem(item.id)}
               />
             </div>
           </div>
         );
       })}
-      <div className="total">Total: {sum} $</div>
+      <div className="total">
+        Total: <span>{sum}</span> $
+      </div>
     </div>
   );
 };
