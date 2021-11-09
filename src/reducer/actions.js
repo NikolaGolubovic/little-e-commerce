@@ -1,5 +1,5 @@
 const ACTIONS = {
-  ALL_ITEMS: "all-items",
+  ITEMS_NUMBER: "item-to-cart",
 };
 
 export default ACTIONS;

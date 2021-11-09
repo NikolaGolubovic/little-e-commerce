@@ -1,4 +1,33 @@
 @media (min-width: 280px) {
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+  }
+  nav>* {
+    width: 100px;
+  }
+  nav a {
+    text-decoration: none;
+    color: black;
+  }
+  .nav-link {
+    color: darkcyan;
+  }
+  .nav-link.activated {
+    color: red;
+  }
+  .nav-cart {
+    font-size: 2rem;
+  }
+  .nav-link span {
+    position: relative;
+    background: yellow;
+    border-radius: 50%;
+    top: -15px;
+    left: -15px;
+    font-size: 1.4rem;
+  }
   .products {
     display: flex;
     flex-direction: column;
@@ -20,7 +49,123 @@
     width: 100px;
     height: 100px;
   }
+  /* CART ITEMS */
+  .cart-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .cart-item {
+    display: flex;
+    margin: 10px 0;
+  }
+  .cart-item>* {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cart-item img {
+    width: 80px;
+    height: 80px;
+  }
   .cart-icon {
     cursor: pointer;
+  }
+  .dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown-content .drop-choose {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown .drop-choose:hover {
+    background-color: #ddd;
+  }
+  /* TABOVI */
+  .tabs {
+    display: flex;
+  }
+  .tab {
+    border: none;
+    padding: 10px;
+    margin-right: 5px;
+    margin-top: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .tab.active {
+    background: #3498DB;
+    color: white;
+  }
+  .show {
+    display: block;
+  }
+  .pagination {
+    text-align: center;
+  }
+  .pagination>li {
+    display: inline-block;
+    padding-left: 0;
+    cursor: pointer;
+  }
+  .pagination>li {
+    list-style: none;
+  }
+  .pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    text-decoration: none;
+    color: red;
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+  }
+  .pagination>li.active>a {
+    color: #fff;
+    background-color: green;
+  }
+  /* Style the active class (and buttons on mouse-over) */
+  .pagination>li>a:hover {
+    background-color: green;
+    color: white;
+  }
+  .pagination>li:first-child>a, .pagination>li:first-child>span {
+    margin-left: 0;
+    padding: 0px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    display: none!important;
+  }
+  .pagination>li:last-child>a, .pagination>li:last-child>span {
+    border-bottom-right-radius: 4px;
+    margin-right: 0;
+    padding: 0px!important;
+    border-top-right-radius: 4px;
+    display: none!important;
   }
 }
