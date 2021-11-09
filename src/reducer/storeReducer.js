@@ -11,4 +11,18 @@ export function reducer(state, action) {
       cartQuantity: total,
     };
   }
+  if (action.type === ACTIONS.OPEN_MODAL) {
+    const openModal = true;
+    return {
+      ...state,
+      modal: { itemName: action.payload.item, openModal },
+    };
+  }
+  if (action.type === ACTIONS.CLOSE_MODAL) {
+    const openModal = false;
+    return {
+      ...state,
+      modal: { itemName: "", openModal },
+    };
+  }
 }

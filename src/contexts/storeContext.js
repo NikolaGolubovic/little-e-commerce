@@ -8,7 +8,9 @@ export const StoreContext = createContext();
 const StoreProvider = ({ children }) => {
   const [products, dispatch] = useThunkReducer(reducer, {});
   const value = {
-    cartQuantity: 0 || products.cartQuantity,
+    cartQuantity: 0 || products?.cartQuantity,
+    openModal: products?.modal?.openModal,
+    itemName: products?.modal?.itemName,
     dispatch,
   };
   return (

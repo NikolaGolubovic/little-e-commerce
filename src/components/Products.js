@@ -56,7 +56,6 @@ const Products = () => {
         pageRangeDisplayed={5}
         containerClassName={"pagination"}
         activeClassName={"active"}
-        initialPage={0}
         forcePage={page}
         onPageChange={handlePageClick}
       />

@@ -60,6 +60,10 @@ const ItemsPage = ({ itemsPage, category, items, setItemsPage, page }) => {
     setCartInLocal(storage);
     localStorage.setItem(storageName, JSON.stringify(storage));
     storeContext.dispatch({ type: ACTIONS.ITEMS_NUMBER });
+    storeContext.dispatch({
+      type: ACTIONS.OPEN_MODAL,
+      payload: { item: item.title.split(" ").slice(0, 3).join(" ") },
+    });
   }
   return (
     <div>

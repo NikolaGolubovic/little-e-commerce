@@ -60,6 +60,7 @@ const Tabs = ({
           <button
             className={index === active ? "tab active" : "tab"}
             onClick={(e) => changeTab(e, index)}
+            key={name}
           >
             {name}
           </button>
