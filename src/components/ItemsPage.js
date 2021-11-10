@@ -71,8 +71,8 @@ const ItemsPage = ({ itemsPage, category, items, setItemsPage, page }) => {
         <div className="item-image">
           <p>Item</p>
         </div>
-        <div className="item-title">
-          <p>Title</p>
+        <div className="item-title item-header">
+          <p class="item-header">Title</p>
         </div>
         <div className="item-price">
           <p>Price</p>
