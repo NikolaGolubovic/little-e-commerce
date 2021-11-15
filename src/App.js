@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useContext } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { StoreContext } from "./contexts/storeContext";
+import "./App.css";
+import Navigation from "./components/Nav";
+import Homepage from "./components/Homepage";
+import Products from "./components/Products";
+import Product from "./components/Product";
+import Cart from "./components/Cart";
+import Modal from "./components/Modal";
 
 function App() {
+  const storeContext = useContext(StoreContext);
+  const { openModal, itemName } = storeContext;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Homepage />} exact />
+          <Route path="products/*" element={<Products />} />
+          <Route path="product/:id" element={<Product />} />
+          <Route path="cart/*" element={<Cart />} />
+        </Routes>
+        <Modal openModal={openModal} itemName={itemName} />
+      </Router>
+    </>
   );
 }
 
